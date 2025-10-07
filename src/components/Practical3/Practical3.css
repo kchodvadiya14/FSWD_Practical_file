@@ -1,0 +1,114 @@
+.calculator-container {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 1.1rem;
+  color: #646cff;
+  font-weight: 600;
+}
+
+.input-group input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid rgba(100, 108, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.operator {
+  text-align: center;
+  font-size: 3rem;
+  color: #646cff;
+  font-weight: bold;
+}
+
+.calculator-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.calc-btn {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.calc-btn.add {
+  background-color: #43e97b;
+  color: white;
+}
+
+.calc-btn.add:hover:not(:disabled) {
+  background-color: #38d66a;
+  transform: translateY(-2px);
+}
+
+.calc-btn.add:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.calc-btn.reset {
+  background-color: #f5576c;
+  color: white;
+}
+
+.calc-btn.reset:hover {
+  background-color: #e0445a;
+  transform: translateY(-2px);
+}
+
+.result-display {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  animation: slideIn 0.3s ease;
+}
+
+.result-display h3 {
+  margin: 0 0 1rem 0;
+  color: white;
+}
+
+.result-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
